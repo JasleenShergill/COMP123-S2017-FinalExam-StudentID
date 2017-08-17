@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /*
- * Name:
- * Date:
- * StudentID:
- * Description:
- * Version:
+ * Name:Jasleen
+ * Date:17 August 2017
+ * StudentID:300929376
+ * Description:Final Project
+ * Version:0.1 version creating splash formm
  */
 
 namespace COMP123_S2017_FinalExam_StudentID
@@ -24,7 +24,7 @@ namespace COMP123_S2017_FinalExam_StudentID
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PickHighestCardForm());
+            Application.Run(new SplashForm());
         }
     }
 }
