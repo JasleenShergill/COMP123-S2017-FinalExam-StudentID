@@ -15,7 +15,7 @@ using System.Windows.Forms;
  * Date: 17 August 2017
  * StudentID:300929376
  * Description:
- * Version:
+ * Version:0.2 describe a scoreboard
  */
 
 namespace COMP123_S2017_FinalExam_StudentID
@@ -29,6 +29,7 @@ namespace COMP123_S2017_FinalExam_StudentID
         Deck _deck;
         Hand _hand;
         int _maximumPoints;
+        private ScoreBoard _scoreboard;
 
         // PUBLIC PROPERTIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public List<PictureBox> DealtCardPictureBoxList
@@ -109,6 +110,18 @@ namespace COMP123_S2017_FinalExam_StudentID
             set
             {
                 this._maximumPoints = value;
+            }
+        }
+
+        public ScoreBoard ScoreBoard
+        {
+            get
+            {
+                return this._scoreboard;
+            }
+            set
+            {
+                this._scoreboard = value;
             }
         }
 
@@ -222,6 +235,7 @@ namespace COMP123_S2017_FinalExam_StudentID
         private void PickHighestCardForm_Load(object sender, EventArgs e)
         {
             // Initialize ScoreBoard HERE
+            this.ScoreBoard = new ScoreBoard(this.ScoreTextBox, this.TimeTextBox, this.FinalScoreTextBox);
 
             // Initialize the App Sounds
             this._buildDealtCardPictureBoxList();
@@ -273,7 +287,7 @@ namespace COMP123_S2017_FinalExam_StudentID
                 UserMessageTextBox.Text = "You Got It!";
 
                 //Uncomment this --> ScoreBoard.Score += this.MaximumPoints;
-
+                ScoreBoard.Score += this.MaximumPoints;
                 DealButton.Enabled = true;
             }
             // otherwise Red

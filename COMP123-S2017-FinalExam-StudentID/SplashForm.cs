@@ -42,5 +42,10 @@ namespace COMP123_S2017_FinalExam_StudentID
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
